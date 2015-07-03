@@ -36,6 +36,80 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:background="@color/bg_Gray" />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="精品推荐"
+                    android:textColor="@color/tv_Black"
+                    android:textSize="20sp" />
+             <!-- 推荐开始 -->
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/menu_1_0" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_Gray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/menu_1_1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_Gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/menu_1_2" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/bg_Gray" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/menu_1_3" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout><!-- 推荐结束 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/bg_Gray" />
         </LinearLayout>
     </ScrollView>
 
