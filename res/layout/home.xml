@@ -110,6 +110,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@color/bg_Gray" />
+            <!-- 失物招领开始 -->
+              <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="失物招领"
+                    android:textColor="@color/tv_Black"
+                    android:textSize="20sp" />
+              
+             <com.jarvis.MyView.MyGridView
+                    android:id="@+id/my_gridview_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="5dp" >
+                </com.jarvis.MyView.MyGridView>
+                <!-- end lost&found -->
+            
         </LinearLayout>
     </ScrollView>
 

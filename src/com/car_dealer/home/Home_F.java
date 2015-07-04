@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import com.example.car_dealer.R;
 import com.javis.Adapter.Adapter_GridView;
+import com.javis.Adapter.Adapter_GridView_hot;
 import com.javis.ab.view.AbOnItemClickListener;
 import com.javis.ab.view.AbSlidingPlayView;
 
@@ -21,14 +22,20 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Toast;
 
 public class Home_F extends Fragment {
 	
 	// 分类九宫格的资源文件
 	private int[] pic_path_classify = { R.drawable.menu_guide_2, R.drawable.menu_guide_3, R.drawable.menu_guide_4, R.drawable.menu_guide_5, R.drawable.menu_guide_6, R.drawable.menu_guide_7, R.drawable.menu_guide_8 };
+	// 热门市场的资源文件
+	private int[] pic_path_hot = { R.drawable.menu_1, R.drawable.menu_2, R.drawable.menu_3, R.drawable.menu_4, R.drawable.menu_5, R.drawable.menu_6 };
 	//分类的九宫格
 	private GridView gridView_classify;
+	//失物招领
+	private GridView my_gridView_hot;
 	//gridview适配器
+	private Adapter_GridView_hot adapter_GridView_hot;
 	private Adapter_GridView adapter_GridView_classify;
 	public AbSlidingPlayView viewPager;
 	/**存储首页轮播的界面*/
@@ -45,7 +52,7 @@ public class Home_F extends Fragment {
 	}
 	
 	private void initView(View view){
-		
+		//分类
 		gridView_classify = (GridView) view.findViewById(R.id.my_gridview);
 		gridView_classify.setSelector(new ColorDrawable(Color.TRANSPARENT));
 		adapter_GridView_classify = new Adapter_GridView(getActivity(), pic_path_classify);
@@ -59,7 +66,19 @@ public class Home_F extends Fragment {
 				//startActivity(intent);
 			}
 		});
-		
+		//失物招领
+		my_gridView_hot=(GridView)view.findViewById(R.id.my_gridview_hot);
+		my_gridView_hot.setSelector(new ColorDrawable(Color.TRANSPARENT));
+		adapter_GridView_hot=new Adapter_GridView_hot(getActivity(), pic_path_hot);
+		my_gridView_hot.setAdapter(adapter_GridView_hot);
+		my_gridView_hot.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				Toast.makeText(getActivity(), "ViewId--->>>"+view.getId(), Toast.LENGTH_SHORT).show();
+			}
+		});
 		viewPager = (AbSlidingPlayView) view.findViewById(R.id.viewPager_menu);
 		//设置播放方式为顺序播放
 		viewPager.setPlayType(1);

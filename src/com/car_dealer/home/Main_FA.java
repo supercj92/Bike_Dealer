@@ -1,6 +1,8 @@
 package com.car_dealer.home;
 
 
+import com.car_dealer.forum.Forum_F;
+import com.car_dealer.user.User_F;
 import com.example.car_dealer.R;
 
 
@@ -28,6 +30,10 @@ public class Main_FA extends FragmentActivity implements OnClickListener {
 
 		/** 主界面 */
 		private Home_F home_F;
+		//个人中心
+		private User_F user_F;
+		
+		private Forum_F forum_F;
 		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -71,9 +77,32 @@ public class Main_FA extends FragmentActivity implements OnClickListener {
 					showFragment(home_F);
 				}
 			}
-
 			break;
-	
+		case R.id.iv_menu_2:
+				//吐槽
+			if(forum_F==null){
+				forum_F=new Forum_F();
+				addFragment(forum_F);
+				showFragment(forum_F);
+			}else {
+				if(forum_F.isHidden()){
+					showFragment(forum_F);
+				}
+			}
+			break;
+		case R.id.iv_menu_4:
+			//个人中心
+			if(user_F==null){
+				user_F=new User_F();
+				addFragment(user_F);
+				showFragment(user_F);
+			}else {
+				if(user_F.isHidden()){
+					showFragment(user_F);
+				}
+			}
+			break;
+			
 		}
 		
 		// 设置按钮的选中和未选中资源
@@ -101,6 +130,12 @@ public class Main_FA extends FragmentActivity implements OnClickListener {
 		// 判断页面是否已经创建，如果已经创建，那么就隐藏掉
 		if (home_F != null) {
 			ft.hide(home_F);
+		}
+		if(user_F!=null){
+			ft.hide(user_F);
+		}
+		if(forum_F!=null){
+			ft.hide(forum_F);
 		}
 		ft.show(fragment);
 		ft.commitAllowingStateLoss();
