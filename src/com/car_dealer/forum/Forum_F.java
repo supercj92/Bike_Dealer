@@ -71,7 +71,6 @@ public class Forum_F extends Fragment implements OnTouchListener,IXListViewListe
 				
 				
 			}
-
 			@Override
 			protected HashMap<String, Object> doInBackground(Void... arg0) {
 				String url = "";
@@ -103,8 +102,6 @@ public class Forum_F extends Fragment implements OnTouchListener,IXListViewListe
 					dialog.dismiss();
 					dialog=null;
 				}
-				
-				
 				//如果网络数据请求失败，那么显示默认的数据
 				if (result != null && result.get("data") != null) {
 					//得到data字段的数据

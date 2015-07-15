@@ -3,9 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF" >
-
-    
-    
     
     <com.lesogo.cu.custom.xListview.XListView
         android:id="@+id/listView_ware"
@@ -15,5 +12,4 @@
 
    <include layout="@layout/top_menu"/>
        
-
 </RelativeLayout>

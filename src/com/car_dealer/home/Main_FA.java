@@ -2,6 +2,7 @@ package com.car_dealer.home;
 
 
 import com.car_dealer.forum.Forum_F;
+import com.car_dealer.shop.Shop_F;
 import com.car_dealer.user.User_F;
 import com.example.car_dealer.R;
 
@@ -34,6 +35,8 @@ public class Main_FA extends FragmentActivity implements OnClickListener {
 		private User_F user_F;
 		
 		private Forum_F forum_F;
+		
+		private Shop_F shop_F;
 		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +78,18 @@ public class Main_FA extends FragmentActivity implements OnClickListener {
 			} else {
 				if (home_F.isHidden()) {
 					showFragment(home_F);
+				}
+			}
+			break;
+		case R.id.iv_menu_1:
+			//车城
+			if(shop_F==null){
+				shop_F=new Shop_F();
+				addFragment(shop_F);
+				showFragment(shop_F);
+			}else {
+				if(shop_F.isHidden()){
+					showFragment(shop_F);
 				}
 			}
 			break;
@@ -130,6 +145,9 @@ public class Main_FA extends FragmentActivity implements OnClickListener {
 		// 判断页面是否已经创建，如果已经创建，那么就隐藏掉
 		if (home_F != null) {
 			ft.hide(home_F);
+		}
+		if(shop_F!=null){
+			ft.hide(shop_F);
 		}
 		if(user_F!=null){
 			ft.hide(user_F);

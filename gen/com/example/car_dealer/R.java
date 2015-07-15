@@ -574,20 +574,23 @@ public final class R {
         /**  Messages IDs 
          */
         public static final int auto_focus=0x7f070000;
+        public static final int bt_cart_all=0x7f07001d;
+        public static final int bt_cart_low=0x7f07001e;
+        public static final int bt_cart_stock=0x7f07001f;
         public static final int decode=0x7f070001;
         public static final int decode_failed=0x7f070002;
         public static final int decode_succeeded=0x7f070003;
         public static final int encode_failed=0x7f070004;
         public static final int encode_succeeded=0x7f070005;
-        public static final int imageView1=0x7f070020;
+        public static final int imageView1=0x7f070027;
         public static final int iv_adapter_grid_pic=0x7f070013;
         public static final int iv_adapter_list_pic=0x7f070014;
         public static final int iv_menu_0=0x7f07000f;
         public static final int iv_menu_1=0x7f070010;
         public static final int iv_menu_2=0x7f070011;
         public static final int iv_menu_4=0x7f070012;
-        public static final int iv_refresh=0x7f07001f;
-        public static final int iv_shao=0x7f07001d;
+        public static final int iv_refresh=0x7f070026;
+        public static final int iv_shao=0x7f070024;
         public static final int launch_product_query=0x7f070006;
         public static final int listView_ware=0x7f070018;
         public static final int menu_bottom=0x7f07000e;
@@ -603,19 +606,23 @@ public final class R {
         public static final int sale_num=0x7f070017;
         public static final int search_book_contents_failed=0x7f07000a;
         public static final int search_book_contents_succeeded=0x7f07000b;
+        public static final int show_cart_all=0x7f070020;
+        public static final int show_cart_low=0x7f070021;
+        public static final int show_cart_stock=0x7f070022;
+        public static final int show_cart_view=0x7f070023;
         public static final int show_layout=0x7f07000c;
-        public static final int textView1=0x7f070021;
-        public static final int tv_top_title=0x7f07001e;
+        public static final int textView1=0x7f070028;
+        public static final int tv_top_title=0x7f070025;
         public static final int viewPager_menu=0x7f070019;
-        public static final int xlistview_footer_content=0x7f070022;
-        public static final int xlistview_footer_hint_textview=0x7f070023;
-        public static final int xlistview_footer_progressbar=0x7f070024;
-        public static final int xlistview_header_arrow=0x7f070029;
-        public static final int xlistview_header_content=0x7f070025;
-        public static final int xlistview_header_hint_textview=0x7f070027;
-        public static final int xlistview_header_progressbar=0x7f07002a;
-        public static final int xlistview_header_text=0x7f070026;
-        public static final int xlistview_header_time=0x7f070028;
+        public static final int xlistview_footer_content=0x7f070029;
+        public static final int xlistview_footer_hint_textview=0x7f07002a;
+        public static final int xlistview_footer_progressbar=0x7f07002b;
+        public static final int xlistview_header_arrow=0x7f070030;
+        public static final int xlistview_header_content=0x7f07002c;
+        public static final int xlistview_header_hint_textview=0x7f07002e;
+        public static final int xlistview_header_progressbar=0x7f070031;
+        public static final int xlistview_header_text=0x7f07002d;
+        public static final int xlistview_header_time=0x7f07002f;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -625,10 +632,11 @@ public final class R {
         public static final int forum=0x7f030004;
         public static final int home=0x7f030005;
         public static final int pic_item=0x7f030006;
-        public static final int top_menu=0x7f030007;
-        public static final int user=0x7f030008;
-        public static final int xlistview_footer=0x7f030009;
-        public static final int xlistview_header=0x7f03000a;
+        public static final int shop=0x7f030007;
+        public static final int top_menu=0x7f030008;
+        public static final int user=0x7f030009;
+        public static final int xlistview_footer=0x7f03000a;
+        public static final int xlistview_header=0x7f03000b;
     }
     public static final class string {
         public static final int action_settings=0x7f080001;
